@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Formular Kirby</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 30px;
+      background-color: #ffe4ec;
+      color: #5d2c7d;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 1.9em;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #d94f9e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #c03f8c;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hai să-ți arătăm cel mai performant sistem de curățenie, Kirby și să-ți curățăm o canapea și un covor GRATIS!</h1>
+  <form name="formular-curatenie" method="POST" data-netlify="true">
+    <label for="nume">Nume și prenume*</label>
+    <input type="text" id="nume" name="nume" required>
+
+    <label for="telefon">Număr de telefon*</label>
+    <input type="tel" id="telefon" name="telefon" required>
+
+    <label for="oras">Oraș*</label>
+    <select id="oras" name="oras" required>
+      <option value="">-- Selectează --</option>
+      <option>Buzau și împrejurimi</option>
+      <option>București și împrejurimi</option>
+      <option>Brăila și împrejurimi</option>
+      <option>Focșani și împrejurimi</option>
+      <option>Urziceni și împrejurimi</option>
+      <option>Slobozia și împrejurimi</option>
+      <option>Alt oraș/sat în apropiere (max 50km)</option>
+    </select>
+
+    <label for="profesie">Profesie (opțional)</label>
+    <input type="text" id="profesie" name="profesie">
+
+    <label for="kirby">Știu ce este Kirby și vreau să îl achiziționez! (opțional)</label>
+    <select id="kirby" name="kirby">
+      <option value="">-- Selectează --</option>
+      <option>Da</option>
+      <option>Nu</option>
+    </select>
+
+    <button type="submit">Trimite</button>
+  </form>
+</body>
+</html>
